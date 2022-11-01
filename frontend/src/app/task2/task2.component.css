@@ -1,0 +1,180 @@
+.header{
+    display: flex;
+    flex-direction: row;
+}
+.header img{
+    width:7%;
+    margin-left:10em;
+}
+.why{
+    margin-left:32em;
+    margin-top:0.5em;
+    font: normal normal normal 14px/20px Muli;
+    letter-spacing: 0.5px;
+
+}
+.marketing,.pricing{
+    margin-left:2em;
+    margin-top:0.5em;
+    font: normal normal normal 14px/20px Muli;
+    letter-spacing: 0.5px;
+}
+.button{
+    margin-left:2em;
+    border:1px solid skyblue;
+    background-color: white;
+    color:skyblue;
+}
+body h1{
+    margin-top:1em;
+    font: normal normal bold 64px/90px Merriweather;
+    letter-spacing: 0.45px;
+
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+    margin-left:10em;
+}
+.pickbutton{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    background-color: #4099F1;
+    padding:0.5em;
+    width:130px;
+    border:1px solid #4099F1;
+
+}
+
+.stroke-1 {
+    stroke-linecap: butt;
+}
+.module{
+    margin-left:20em;
+}
+line {
+    stroke: #707070;
+    border: 1px solid #707070;
+    overflow: hidden;
+}
+.contentbox{
+    margin-left:10em;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    margin-top:5em;
+
+}
+.maximize{
+    margin-top: 0.3em;
+}
+.blog{
+    font: normal normal bold 14px/26px Muli;
+    letter-spacing: 1px;
+    color: #4099F1;
+}
+
+.explore{
+    display: flex;
+    flex-direction: row;
+}
+.tips{
+    font: normal normal bold 32px/42px Merriweather;
+
+}
+.westicon{
+    margin-left:23.5em;
+    margin-top:10px;
+    opacity: 0.2;
+
+}
+.easticon{
+    margin-top:10px;
+    margin-left:1em;
+}
+.boxmodel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    gap:1em;
+    
+
+}
+.box img{
+    max-height: 750px;
+    max-width:500px;
+padding:2px;}
+.profile{
+    background-color: white;
+    position: absolute;
+    top: 288px;
+    width:11%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+}
+.profile img{
+    border-radius: 10%;
+    width: 32px;
+    height: 35px;
+    margin-top:3px;
+    margin-left:1em;
+
+}
+.profile h3{
+    font: normal normal bold 12px/30px Merriweather;
+    letter-spacing: 0.25px;
+    color: #1E202F;
+    margin-top:0.5em;
+}
+.title{
+    font: normal normal 900 20px/30px Merriweather;
+    letter-spacing: 0.42px;
+    margin-top:1em;
+
+}
+.description{
+    font: normal normal normal 12px/23px Muli;
+    letter-spacing: 0.24px;
+    color: #888990;
+}
+footer .contentbox{
+    position: absolute;
+    margin-left:10em;
+    display: flex;
+    flex-direction: row;
+    margin-top:50em;
+    margin-bottom:2em;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+
+}
+
+.footer img{
+    width:7%;
+}
+.terms{
+    font: normal normal normal 16px/26px Muli;
+    letter-spacing: 0.5px;
+    color: #212B36;
+    margin-left:3em;
+    margin-top:1em;
+    opacity: 1;
+}
+.copyright{
+    font: normal normal normal 16px/26px Muli;
+    letter-spacing: 0.5px;
+    color: #82868A;
+    opacity: 1;
+    margin-top:1em;
+    margin-left:15em;
+
+}
+
+
+
+
+

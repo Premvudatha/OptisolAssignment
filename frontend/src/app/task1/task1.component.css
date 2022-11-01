@@ -1,0 +1,33 @@
+.field{
+    padding-top:1em;
+    width:25%;
+    padding-left: 3em;;
+
+}
+
+.dangertext{
+    color:red
+  }
+.btn{
+    margin-left:3em;
+  }
+.link{
+    font-style: underline;
+  }
+btn-primary{
+    color:blue
+  }
+btn-success{
+    color:green
+  }
+table {
+    width: 90%;
+    padding:5px;
+
+    
+  }
+  .heading{
+    background-color: grey;
+
+  }
+

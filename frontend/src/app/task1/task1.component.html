@@ -1,0 +1,174 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" >
+    <mat-form-field  class="field">
+        <mat-label>First Name</mat-label>
+        <input
+        type="text" 
+        formControlName="firstName" 
+        class="form-control"  
+        matInput>
+            <mat-error  *ngIf="register.firstName.errors?.['required']">First Name is required</mat-error>
+            <mat-error class="dangertext" *ngIf="register.firstName.errors?.['minlength']">Minimum Length is atleast 3 characters</mat-error>
+            <mat-error class="dangertext" *ngIf="register.firstName.errors?.['pattern']">First Name should only be Alphabets</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label>Last Name</mat-label>
+        <input 
+        type="text" 
+        formControlName="lastName" 
+        class="form-control"  
+        matInput>
+            <mat-error class="dangertext" *ngIf="register.lastName.errors?.['required']">Last Name is required</mat-error>
+            <mat-error class="dangertext" *ngIf="register.lastName.errors?.['minlength']">Minimum Length is atleast 3 characters</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label>Email</mat-label>
+        <input
+        type="email" 
+        formControlName="email" 
+        class="form-control"  
+        matInput>
+            <mat-error class="dangertext" *ngIf="register.email.errors?.['required']">Email id is required</mat-error>
+            <mat-error class="dangertext" *ngIf="register.email.errors?.['email']">Enter Valid Email id</mat-error>
+    </mat-form-field><br>
+ 
+    <mat-form-field class="field">
+        <mat-label>Mobile Number</mat-label>
+        <input 
+        type="phoneNumber" 
+        formControlName="phoneNumber" 
+        class="form-control"  
+        matInput>
+            <mat-error class="dangertext" *ngIf="register.phoneNumber.errors?.['required']">Mobile Number is required</mat-error>
+            <mat-error class="dangertext" *ngIf="register.phoneNumber.errors?.['minlength']||register.phoneNumber.errors?.['maxlength']">Enter 10 Digits</mat-error><br>
+            <mat-error class="dangertext" *ngIf="register.phoneNumber.errors?.['pattern']">Enter Only Numbers </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label>Qualification</mat-label>
+        <input 
+        type="text" 
+        formControlName="qualification" 
+        class="form-control"  
+        matInput>
+            <mat-error class="dangertext" *ngIf="register.qualification.errors?.['required']">Qualification is required</mat-error>
+            <mat-error class="dangertext" *ngIf="register.qualification.errors?.['minlength']">Minimum Length is atleast 3 characters</mat-error>
+    </mat-form-field>
+
+   <mat-form-field class="field">
+        <mat-label>Country</mat-label>
+        <mat-select
+        formControlName="country"
+        class="form-control" (change)="onSelect($event.target)">
+        <mat-option *ngFor="let country of countries?.countries" [value]="country.id" >
+            {{ country.name}}
+        </mat-option>
+        </mat-select>
+        <mat-error *ngIf="register.country.errors?.['required']">Please select a country.</mat-error>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field class="field">
+        <mat-label>State</mat-label>
+        <mat-select
+        formControlName="state"
+        class="form-control" (change)="onSelect($event.target)"
+        >
+          <mat-option *ngFor="let state of states?.states" [value]="state.id">
+            {{ state.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="register.state.errors?.['required']">Please select a state.</mat-error>
+      </mat-form-field>
+     
+      <mat-form-field class="field">
+        <mat-label>City</mat-label>
+        <mat-select formControlName="city"   class="form-control">
+          <mat-option *ngFor="let city of cities?.cities" [value]="city.id" >
+            {{ city.name }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="register.city.errors?.['required']">Please select a city.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="field">
+        <mat-label>Zip Code</mat-label>
+        <input 
+        type="text" 
+        formControlName="zipCode" 
+        class="form-control"  
+        matInput>
+            <mat-error class="dangertext" *ngIf="register.zipCode.errors?.['required']">Zip Code is required</mat-error>
+            <mat-error class="dangertext" *ngIf="register.zipCode.errors?.['minlength']||register.zipCode.errors?.['maxlength']">Enter Maximum 8 Digits</mat-error><br>
+            <mat-error class="dangertext" *ngIf="register.zipCode.errors?.['pattern']">Enter Only Numbers </mat-error>
+    </mat-form-field><br>
+
+    <mat-form-field class="field" >
+        <mat-label>Address 1</mat-label>
+        <textarea 
+        type="text" 
+        formControlName="address1" 
+        class="form-control"  
+        matInput></textarea>
+            <mat-error class="dangertext" *ngIf="register.address1.errors?.['required']">Address is required</mat-error>
+            <mat-error class="dangertext" *ngIf="register.address1.errors?.['minlength']">Minimum Length is atleast 3 characters</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label>Address 2</mat-label>
+        <textarea 
+        type="text" 
+        formControlName="address2" 
+        class="form-control"  
+        matInput></textarea>
+            <mat-error class="dangertext" *ngIf="register.address2.errors?.['required']">Address is required</mat-error>
+            <mat-error class="dangertext" *ngIf="register.address2.errors?.['minlength']">Minimum Length is atleast 3 characters</mat-error>
+    </mat-form-field>
+    <mat-form-field class="field" >
+        <mat-label>Comments</mat-label>
+        <textarea 
+        type="text" 
+        formControlName="comments" 
+        class="form-control"  
+        matInput></textarea>
+    </mat-form-field>
+    <div *ngIf="!isedit">
+        <button   mat-raised-button [disabled]="!registrationForm.valid"  class="btn btn-primary" type="submit" (click)="onSubmit()">Submit</button>
+
+      </div>
+      <div *ngIf="isedit">
+        <button  class="btn btn-success"  mat-raised-button [disabled]="!registrationForm.valid"  class="btn btn-primary" type="save" (click)="onSave()">Save</button>
+
+      </div>
+ </form>
+
+ <br>
+ <table class="table table-bordered">
+    <thead class="heading">
+      <tr >
+          <td>S.No</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Mobile</td>
+          <td> Email</td>
+          <td> Qualification</td>
+          <td> Action</td>
+     </tr>
+  
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items;let i=index">
+          <th scope="row">{{i}}</th>
+         <td><span>{{item.firstName}}</span></td>
+        <td><span>{{item.lastName}}</span></td>
+        <td><span>{{item.phoneNumber}}</span></td>
+        <td><span>{{item.email}}</span></td>
+        <td><span>{{item.qualification}}</span></td>
+
+        <td > <a ><mat-icon style="color:blue"(click)="onedit(i)" >edit</mat-icon></a> |<a> <mat-icon style="color:red" (click)="delete(item,i)">delete</mat-icon></a></td>
+  
+      </tr>
+    </tbody>
+  
+  </table>

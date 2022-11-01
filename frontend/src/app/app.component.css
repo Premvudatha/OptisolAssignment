@@ -1,0 +1,19 @@
+nav .tabs{    
+    display: inline-block;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 1em;
+
+
+}
+
+nav a{
+    color:#910000;
+    background-color:rgba(71, 67, 67, 0.63);
+
+}
+
+nav a:hover{
+    color:blue
+}
+

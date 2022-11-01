@@ -1,0 +1,40 @@
+{
+    "countries":[
+        {
+            "id":1,
+            "name":"India"
+        },
+        {
+            "id":2,
+            "name":"Us"
+        }
+    ],
+    "states":[
+        {"id":1,
+         "name":"Andhra Pradesh",
+        "country_id":1},
+        {"id":2,
+         "name":"Telangana",
+        "country_id":1},
+        {"id":3,
+         "name":"Texas",
+        "country_id":2},
+        {"id":4,
+         "name":"New Jersey",
+        "country_id":2}
+    ],
+    "cities":[
+        {"id":1,
+         "name":"Kurnool",
+        "state_id":1},
+        {"id":2,
+         "name":" Hyderabad",
+        "state_id":2},
+        {"id":3,
+         "name":"Tex",
+        "state_id":3},
+        {"id":4,
+         "name":"California",
+        "state_id":4}
+    ]
+}
